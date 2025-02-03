@@ -8,14 +8,20 @@ class CalculatorServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton(Calculator::class, function ($app) {
-            return new Calculator();
-        });
+        
+
+       
     }
 
     public function boot()
     {
-        
+       // Loading views, migrations, routes, etc.
+
+        // Loading views
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'mycalculator');
+
+        // If you have routes
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
     }
 }
 
