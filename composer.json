@@ -1,11 +1,25 @@
 {
   "name": "dibvendor/mycalculator",
   "description": "A simple calculator package for Laravel",
+  "type": "library",
 "license": "MIT",
 "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "DibVendor\\MyCalculator\\": "src/"
     }
-  }
+  },
+  "require": {
+    "php": ">=7.4",
+    "illuminate/support": "^8.0|^9.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DibVendor\\MyCalculator\\CalculatorServiceProvider"
+      ]
+    }
+  },
+  "repositories": []
+  
 }
